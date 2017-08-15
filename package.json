@@ -1,0 +1,37 @@
+{
+  "name": "forgrubsake",
+  "version": "1.0.0",
+  "description": "website for network of restaurants",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "restaurant",
+    "meal",
+    "food",
+    "events",
+    "forgrubsake"
+  ],
+  "author": "Vasyl Bats, Peter Remidovsky",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-less": "^3.3.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-star-rating": "^4.0.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "normalize-css": "^2.3.1"
+  }
+}
