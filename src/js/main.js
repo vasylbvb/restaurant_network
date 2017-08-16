@@ -4,6 +4,8 @@ $(document).ready(function () {
         maxSlides: 1,
         moveSlides: 1,
         controls: false,
+        //auto: true,
+        //pause: 5000,
         pagerCustom: '#global-header__slider-pager-box'
     });
     $("#location-select").select2({

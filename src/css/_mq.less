@@ -12,6 +12,9 @@
       }
     }
   }
+  #main-nav .main-nav__nav .main-nav__item-user > a {
+    line-height: 52px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -33,7 +36,21 @@
     padding-right: 14px;
   }
   .global-header__search-container > h1 {
+    margin-bottom: 20px;
     font-size: 32px;
+  }
+  .global-header__search-form {
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center;
+  }
+  .global-header__search-form .input-group {
+    display: block;
+    margin-right: 0;
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 290px;
+    }
   }
 }
 
