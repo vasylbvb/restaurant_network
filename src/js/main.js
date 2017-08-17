@@ -26,6 +26,17 @@ $(document).ready(function () {
         //theme: "classic"
         maximumSelectionLength: 1
     });
+    $('.popular-grub__places-list').bxSlider({
+        minSlides: 1,
+        maxSlides: 4,
+        moveSlides: 1,
+        slideWidth: 270,
+        slideMargin: 30,
+        //auto: true,
+        //pause: 5000,
+        controls: false,
+        pager: false
+    });
 });
 
 
@@ -58,21 +69,19 @@ function closeAside(checkBoxSelector, checkLabelSelector) {
         e.stopPropagation();
     });
 }
+/*First dropbox*/
 var $targetLocation = ".popular-grub__location-item";
-var $targetLocationInput = "[id^='popularGrabLocation']";
+var $targetLocationInput = "[id^='popularGrubLocation']";
 var $locationOutput = $(".popular-grub__location-input");
 initializeDropdown(".popular-grub__location-select", $targetLocation, $targetLocationInput, $locationOutput);
 var locationCheck = '#popularGrubLocation';
 var locationLabel = '#popularGrubLocation+label';
 closeAside(locationCheck, locationLabel);
-/*var listenCheckClick = document.querySelector("#popularGrubLocation");
-var getChevron = document.querySelector(".popular-grub__location-btn>i");
-$(listenCheckClick).prop("checked", false);
-if ($(listenCheckClick).prop('checked')) {
-    $(getChevron).removeClass('fa-angle-down');
-    $(getChevron).addClass('fa-angle-up');
-    console.log("hello");
-} else {
-    $(getChevron).removeClass('fa-angle-up');
-    $(getChevron).addClass('fa-angle-down');
-}*/
+/*Second dropbox*/
+var $targetPlace = ".popular-grub__places-item";
+var $targetPlaceInput = "[id^='popularGrubPlace']";
+var $placeOutput = $(".popular-grub__places-input");
+initializeDropdown(".popular-grub__places-select", $targetPlace, $targetPlaceInput, $placeOutput);
+var placeCheck = '#popularGrubPlace';
+var placeLabel = '#popularGrubPlace+label';
+closeAside(placeCheck, placeLabel);

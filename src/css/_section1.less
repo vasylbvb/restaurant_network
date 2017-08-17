@@ -40,6 +40,9 @@ Popular grub section
   & > i {
     margin-left: 5px;
   }
+  & > i.fa-angle-up {
+    display: none;
+  }
 }
 #popularGrubLocation {
   display: none;
@@ -60,6 +63,14 @@ Popular grub section
 }
 #popularGrubLocation:checked ~ .popular-grub__location-select {
   display: block;
+}
+#popularGrubLocation:checked + label {
+  & > i.fa-angle-down {
+    display: none;
+  }
+  & > i.fa-angle-up {
+    display: inline-block;
+  }
 }
 .popular-grub__location-item {
   height: 30px;

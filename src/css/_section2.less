@@ -1,0 +1,281 @@
+@import "_vars";
+@import "_fonts";
+
+/*********************
+Popular grub section
+*********************/
+.popular-places {
+  min-height: 410px;
+  background-color: @main-white-color1;
+}
+.popular-places__inner {
+  max-width: @main-width;
+  min-height: inherit;
+  margin: 0 auto;
+  text-align: left;
+}
+.popular-places__inner h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 16px;
+  color: @main-black-color;
+  text-transform: uppercase;
+  line-height: 20px;
+  position: relative;
+}
+.popular-places__loc-sel-box {
+  display: inline-block;
+  position: relative;
+  margin-left: 45px;
+  height: 20px;
+  line-height: 20px;
+}
+.popular-grub__places-btn {
+  margin: 0;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 14px;
+  color: @main-grey-color2;
+  text-transform: uppercase;
+  text-decoration: underline;
+  & > i {
+    margin-left: 5px;
+  }
+  & > i.fa-angle-up {
+    display: none;
+  }
+}
+#popularGrubPlace {
+  display: none;
+}
+.popular-grub__places-select {
+  display: none;
+  list-style: none;
+  width: 135px;
+  height: 60px;
+  background-color: @main-white-color1;
+  overflow: auto;
+  position: absolute;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 12px;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+}
+#popularGrubPlace:checked ~ .popular-grub__places-select {
+  display: block;
+}
+#popularGrubPlace:checked + label {
+  & > i.fa-angle-down {
+    display: none;
+  }
+  & > i.fa-angle-up {
+    display: inline-block;
+  }
+}
+.popular-grub__places-item {
+  height: 30px;
+  border-top: solid 1px @main-grey-color1;
+  border-right: solid 1px @main-grey-color1;
+  border-left: solid 1px @main-grey-color1;
+  line-height: 28px;
+  text-align: center;
+  color: @main-grey-color2;
+  text-transform: uppercase;
+  & > input[type=radio] {
+    display: none;
+  }
+  &:hover {
+    color: @main-orange-color;
+  }
+  &:last-child {
+    border-bottom: solid 1px @main-grey-color1;
+  }
+}
+.popular-grub__places-see-all {
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 16px;
+  color: #0c0c0c;
+  text-transform: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    & > i {
+      font-weight: 700;
+    }
+  }
+}
+
+/******************************
+Popular places gallery stiles
+******************************/
+.popular-grub__places-gallery {
+  padding-right: 0;
+  padding-left: 0;
+}
+.popular-grub__places-list {
+  list-style: none;
+}
+.popular-grub__places-item {
+  width: 270px;
+  height: 280px;
+  border: solid 1px #e8ebec;
+  border-radius: 5px;
+  background-color: @main-white-color1;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  &:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    
+  }
+}
+.popular-grub__places-img-box {
+  width: 100%;
+  height: 152px;
+  position: relative;
+  & > .popular-grub__places-link {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    & > .popular-grub__places-img {
+      width: inherit;
+      height: inherit;
+    }
+    & > .popular-grub__places-img-caption {
+      font-family: "Lato-Black", sans-serif;
+      font-size: 18px;
+      line-height: 20px;
+      color: @main-white-color1;
+      text-transform: capitalize;
+      text-align: left;
+      letter-spacing: 1px;
+      position: absolute;
+      top: 110px;
+      left: 16px;
+    }
+  }
+}
+.popular-grub__places-desc-box {
+  width: 100%;
+  height: 128px;
+  padding: 18px 15px;
+  background-color: @main-white-color1;
+  text-align: left;
+  position: relative;
+  & > span.badge {
+    background-color: @main-orange-color;
+    color: @main-white-color1;
+    font-family: "Lato-Bold", sans-serif;
+    font-size: 12px;
+    position: absolute;
+    top: 18px;
+    right: 14px;
+    & > i {
+      font-size: 10px;
+      margin-left: 2px;
+    }
+  }
+}
+.popular-grub__places-desc-cuisine {
+  margin: 5px 0 18px 0;
+  width: 196px;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 14px;
+  color: @main-orange-color;
+  text-transform: none;
+  line-height: 10px;
+}
+.popular-grub__places-desc-price-rating {
+  list-style: none;
+  width: 48px;
+  height: 12px;
+  margin: 0;
+  position: absolute;
+  top: 46px;
+  left: 15px;
+  & > .popular-grub__places-desc-price-rate {
+    display: inline-block;
+    margin-left: -3px;
+    font-size: 12px;
+    color: @main-grey-color1;
+    height: 12px;
+    line-height: 12px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  & > .active-color {
+    color: @main-orange-color;
+  }
+}
+.popular-grub__places-desc-address {
+  padding-left: 62px;
+  text-transform: none;
+  color: @main-grey-color2;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  & > i {
+    margin-right: 3px;
+    font-size: 16px;
+  }
+}
+.popular-grub__places-desc-phone {
+  text-transform: none;
+  color: @main-grey-color2;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  & > i {
+    margin-right: 7px;
+    font-size: 16px;
+  }
+}
+.popular-grub__places-desc-distance {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 11px;
+  color: #2c2c2c;
+  text-transform: none;
+  line-height: 11px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.popular-grub__places-gallery .bx-wrapper {
+  height: 295px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  background-color: @main-white-color1;
+  border: none;
+  box-shadow: none;
+  & > .bx-viewport {
+    height: inherit !important;
+    padding-top: 5px;
+  }
+}
