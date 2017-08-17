@@ -32,9 +32,12 @@ $(document).ready(function () {
         moveSlides: 1,
         slideWidth: 270,
         slideMargin: 30,
+        prevText: "",
+        nextText: "",
+        prevSelector: ".places-gallery__prev-btn",
+        nextSelector: ".places-gallery__next-btn",
         //auto: true,
         //pause: 5000,
-        controls: false,
         pager: false
     });
 });

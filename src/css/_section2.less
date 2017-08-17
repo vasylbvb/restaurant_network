@@ -73,7 +73,7 @@ Popular grub section
     display: inline-block;
   }
 }
-.popular-grub__places-item {
+li.popular-grub__places-item {
   height: 30px;
   border-top: solid 1px @main-grey-color1;
   border-right: solid 1px @main-grey-color1;
@@ -125,7 +125,7 @@ Popular places gallery stiles
 .popular-grub__places-list {
   list-style: none;
 }
-.popular-grub__places-item {
+.popular-grub__places-list .popular-grub__places-item {
   width: 270px;
   height: 280px;
   border: solid 1px #e8ebec;
@@ -278,4 +278,48 @@ Popular places gallery stiles
     height: inherit !important;
     padding-top: 5px;
   }
+}
+.popular-grub__places-gallery .places-gallery__prev-btn,
+.popular-grub__places-gallery .places-gallery__next-btn {
+  width: 18px;
+  height: 33px;
+  color: #7d7f7f;
+  font-size: 53px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  & > i {
+    font-size: inherit;
+    color: inherit;
+    line-height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  & > a {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}
+
+.popular-grub__places-gallery .places-gallery__prev-btn {
+  left: -48px;
+}
+
+.popular-grub__places-gallery .places-gallery__next-btn {
+  right: -48px;
 }
