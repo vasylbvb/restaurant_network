@@ -27,3 +27,52 @@ $(document).ready(function () {
         maximumSelectionLength: 1
     });
 });
+
+
+//initialize dropdown list
+function initializeDropdown(listSelector, targetItemSelector, getTargetInput, $locationOuputEl) {
+
+    var someList = document.querySelector(listSelector);
+    someList.addEventListener("click", function (e) {
+        var $li = $(e.target).parents(targetItemSelector);
+        if (!$li.length) {
+            return;
+        }
+        var name = $(getTargetInput, $li).val();
+        $locationOuputEl.text(name);
+    });
+}
+//Close list aside
+
+function closeAside(checkBoxSelector, checkLabelSelector) {
+    $(document).click(function (e) {
+        var aCheckBox = $(checkBoxSelector);
+        aCheckBox.prop("checked", false);
+    });
+    var aCheckBox = $(checkBoxSelector);
+    var aCheckLabel = $(checkLabelSelector);
+    $(aCheckBox).click(function (e) {
+        e.stopPropagation();
+    });
+    $(aCheckLabel).click(function (e) {
+        e.stopPropagation();
+    });
+}
+var $targetLocation = ".popular-grub__location-item";
+var $targetLocationInput = "[id^='popularGrabLocation']";
+var $locationOutput = $(".popular-grub__location-input");
+initializeDropdown(".popular-grub__location-select", $targetLocation, $targetLocationInput, $locationOutput);
+var locationCheck = '#popularGrubLocation';
+var locationLabel = '#popularGrubLocation+label';
+closeAside(locationCheck, locationLabel);
+/*var listenCheckClick = document.querySelector("#popularGrubLocation");
+var getChevron = document.querySelector(".popular-grub__location-btn>i");
+$(listenCheckClick).prop("checked", false);
+if ($(listenCheckClick).prop('checked')) {
+    $(getChevron).removeClass('fa-angle-down');
+    $(getChevron).addClass('fa-angle-up');
+    console.log("hello");
+} else {
+    $(getChevron).removeClass('fa-angle-up');
+    $(getChevron).addClass('fa-angle-down');
+}*/

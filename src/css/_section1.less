@@ -1,0 +1,163 @@
+@import "_vars";
+@import "_fonts";
+
+/*********************
+Popular grub section
+*********************/
+.popular-grub {
+  min-height: 330px;
+  background-color: @main-white-color1;
+}
+.popular-grub__inner {
+  max-width: @main-width;
+  min-height: inherit;
+  margin: 0 auto;
+  text-align: center;
+}
+.popular-grub__inner h3 {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 16px;
+  color: @main-black-color;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+.popular-grub__loc-sel-box {
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+.popular-grub__location-btn {
+  margin: 0;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 14px;
+  color: @main-grey-color2;
+  text-transform: uppercase;
+  text-decoration: underline;
+  & > i {
+    margin-left: 5px;
+  }
+}
+#popularGrubLocation {
+  display: none;
+}
+.popular-grub__location-select {
+  display: none;
+  list-style: none;
+  width: 135px;
+  height: 60px;
+  background-color: @main-white-color1;
+  overflow: auto;
+  position: absolute;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 12px;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+}
+#popularGrubLocation:checked ~ .popular-grub__location-select {
+  display: block;
+}
+.popular-grub__location-item {
+  height: 30px;
+  border-top: solid 1px @main-grey-color1;
+  border-right: solid 1px @main-grey-color1;
+  border-left: solid 1px @main-grey-color1;
+  line-height: 28px;
+  text-align: center;
+  color: @main-grey-color2;
+  text-transform: uppercase;
+  & > input[type=radio] {
+    display: none;
+  }
+  &:hover {
+    color: @main-orange-color;
+  }
+  &:last-child {
+    border-bottom: solid 1px @main-grey-color1;
+  }
+}
+
+/*Cuisine line styles*/
+.popular-grub__cuisines {
+  padding-right: 0;
+  padding-left: 0;
+}
+.popular-grub__cuisine-list {
+  list-style: none;
+  margin: 0;
+}
+.popular-grub__cuisine-item {
+  display: inline-block;
+  margin-right: 24px;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.popular-grub__cuisine-outer-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: @main-cream-color;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.popular-grub__cuisine-inner-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.popular-grub__cuisine-inner-box img {
+  width: 100%;
+  height: 100%;
+}
+.popular-grub__cuisine-caption {
+  margin-top: 18px;
+  font-family: "Oswald-Regular", sans-serif;
+  font-size: 18px;
+  color: @main-grey-color2;
+  line-height: 18px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.popular-grub__cuisine-item:hover {
+  & > .popular-grub__cuisine-outer-box {
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);;
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);;
+  }
+  & > .popular-grub__cuisine-outer-box > .popular-grub__cuisine-inner-box {
+    -webkit-transform: translate(-50%, -50%) scale(1.47);
+    -moz-transform: translate(-50%, -50%) scale(1.47);
+    -ms-transform: translate(-50%, -50%) scale(1.47);
+    -o-transform: translate(-50%, -50%) scale(1.47);
+    transform: translate(-50%, -50%) scale(1.47);
+  }
+  & > .popular-grub__cuisine-caption {
+    color: @main-orange-color;
+  }
+}
