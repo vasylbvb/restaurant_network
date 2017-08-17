@@ -15,8 +15,18 @@
   #main-nav .main-nav__nav .main-nav__item-user > a {
     line-height: 52px;
   }
+  .footer-copyright__item {
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 50px;
+    }
+  }
 }
-
+@media (max-width: 992px) {
+  .footer-copyright {
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .logo-box-container > .logo-box {
     width: 100%;
@@ -53,7 +63,15 @@
     }
   }
 }
-
+@media (max-width: 585px) {
+  .footer-copyright__item {
+    display: block;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+}
 @media (max-width: 400px) {
   .navbtn-box > .navbtn {
     margin-top: 15px;
