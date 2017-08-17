@@ -20,4 +20,10 @@ $(document).ready(function () {
         //theme: "classic"
         //maximumSelectionLength: 2
     });
+    $("#locationOfferSelect").select2({
+        placeholder: "Choose location",
+        allowClear: true,
+        //theme: "classic"
+        maximumSelectionLength: 1
+    });
 });

@@ -1,0 +1,143 @@
+.footer {
+  min-height: 300px;
+  margin-top: -300px;
+  & > .footer-container {
+    padding: 0;
+    min-height: inherit;
+    background: url("../images/images from PSD/icons&BGs/Footer-BG.png");
+    & > .footer-container__inner {
+      max-width: @main-width;
+      margin: 0 auto;
+      & > .row {
+        max-width: @main-width;
+      }
+    }
+  }
+}
+.footer-container__inner h4 {
+  margin: 36px 0 30px 0;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 14px;
+  color: @main-white-color1;
+  text-transform: uppercase;
+  line-height: 14px;
+  letter-spacing: 1px;
+}
+
+/***********************
+footer-signup-form
+**********************/
+.footer-signup-form>.input-group,
+.footer-signup-form>button {
+  display: inline-block;
+  width: 220px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+.footer-signup__location > label {
+  position: relative;
+  margin: 0;
+  height: inherit;
+  & > i {
+    font-size: 18px;
+    color: @main-grey-color2;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+  }
+}
+.footer-signup__location span.select2-container {
+  height: inherit;
+  & > span.selection {
+    height: 40px;
+    & > span.select2-selection {
+      height: 40px;
+      background-color: @main-white-color1;
+      & > ul.select2-selection__rendered {
+        min-height: 40px;
+        padding: 0 0 0 39px;
+        & > li.select2-search {
+          line-height: 40px;
+          & > input.select2-search__field {
+            margin: 0;
+            &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+              font-family: "Lato-Regular", sans-serif;
+              font-size: 14px;
+              color: @main-grey-color2;
+            }
+            &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+              font-family: "Lato-Regular", sans-serif;
+              font-size: 14px;
+              color: @main-grey-color2;
+            }
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+              font-family: "Lato-Regular", sans-serif;
+              font-size: 14px;
+              color: @main-grey-color2;
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+              font-family: "Lato-Regular", sans-serif;
+              font-size: 14px;
+              color: @main-grey-color2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer-signup__email {
+  & > label {
+    position: relative;
+    margin: 0;
+    height: inherit;
+    & > i {
+      font-size: 18px;
+      color: @main-grey-color2;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 5;
+    }
+    & > input#offerInputEmail1 {
+      padding: 0 0 0 39px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 4px;
+      &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        font-family: "Lato-Regular", sans-serif;
+        font-size: 14px;
+        color: @main-grey-color2;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        font-family: "Lato-Regular", sans-serif;
+        font-size: 14px;
+        color: @main-grey-color2;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        font-family: "Lato-Regular", sans-serif;
+        font-size: 14px;
+        color: @main-grey-color2;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-family: "Lato-Regular", sans-serif;
+        font-size: 14px;
+        color: @main-grey-color2;
+      }
+    }
+  }
+}
+#footerSignUpBtn {
+  padding: 0;
+  background-color: @main-orange-color;
+  color: @main-white-color1;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  &:hover {
+    background-color: @main-orange-color2;
+  }
+}
