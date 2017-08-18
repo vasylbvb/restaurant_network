@@ -40,6 +40,20 @@ $(document).ready(function () {
         //pause: 5000,
         pager: false
     });
+    $('.events__places-list').bxSlider({
+        minSlides: 1,
+        maxSlides: 6,
+        moveSlides: 1,
+        slideWidth: 170,
+        slideMargin: 30,
+        prevText: "",
+        nextText: "",
+        prevSelector: ".events__prev-btn",
+        nextSelector: ".events__next-btn",
+        //auto: true,
+        //pause: 5000,
+        pager: false
+    });
 });
 
 
@@ -88,3 +102,19 @@ initializeDropdown(".popular-grub__places-select", $targetPlace, $targetPlaceInp
 var placeCheck = '#popularGrubPlace';
 var placeLabel = '#popularGrubPlace+label';
 closeAside(placeCheck, placeLabel);
+/*First dropbox section3*/
+var $targetEvent = ".events__places-item";
+var $targetEventInput = "[id^='eventsPlace']";
+var $eventOutput = $(".events__places-input");
+initializeDropdown(".events__places-select", $targetEvent, $targetEventInput, $eventOutput);
+var eventCheck = '#eventsPlace';
+var eventLabel = '#eventsPlace+label';
+closeAside(eventCheck, eventLabel);
+/*Second dropbox section3*/
+var $timeEvent = ".events__time-item";
+var $timeEventInput = "[id^='eventsTime']";
+var $timeOutput = $(".events__time-input");
+initializeDropdown(".events__time-select", $timeEvent, $timeEventInput, $timeOutput);
+var timeCheck = '#eventsTime';
+var timeLabel = '#eventsTime+label';
+closeAside(timeCheck, timeLabel);
