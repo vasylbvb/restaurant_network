@@ -1,19 +1,23 @@
 @media (max-width: 1280px) {
   .popular-grub__places-gallery .places-gallery__prev-btn,
-  .events__places-gallery .events__prev-btn {
+  .events__places-gallery .events__prev-btn,
+  .offers__places-gallery .offers__prev-btn {
     left: -18px;
   }
 
   .popular-grub__places-gallery .places-gallery__next-btn,
-  .events__places-gallery .events__next-btn {
+  .events__places-gallery .events__next-btn,
+  .offers__places-gallery .offers__next-btn {
     right: -18px;
   }
 }
 @media (max-width: 1208px) {
-  .popular-grub__places-gallery .places-gallery__prev-btn ,
+  .popular-grub__places-gallery .places-gallery__prev-btn,
   .popular-grub__places-gallery .places-gallery__next-btn,
   .events__places-gallery .events__prev-btn,
-  .events__places-gallery .events__next-btn  {
+  .events__places-gallery .events__next-btn,
+  .offers__places-gallery .offers__prev-btn,
+  .offers__places-gallery .offers__next-btn {
     display: none;
   }
 }
@@ -100,6 +104,18 @@
     &:nth-child(2) {
       width: 290px;
     }
+  }
+  .events__inner,
+  .offers__inner {
+    text-align: center;
+  }
+  .events__inner h3,
+  .events__loc-sel-box,
+  .events__time-sel-box,
+  .offers__inner h3,
+  .offers__loc-sel-box,
+  .offers__place-sel-box {
+    margin: 20px 18px 20px 0;
   }
 }
 

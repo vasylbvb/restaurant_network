@@ -54,6 +54,20 @@ $(document).ready(function () {
         //pause: 5000,
         pager: false
     });
+    $('.offers__places-list').bxSlider({
+        minSlides: 1,
+        maxSlides: 4,
+        moveSlides: 1,
+        slideWidth: 270,
+        slideMargin: 30,
+        prevText: "",
+        nextText: "",
+        prevSelector: ".offers__prev-btn",
+        nextSelector: ".offers__next-btn",
+        //auto: true,
+        //pause: 5000,
+        pager: false
+    });
 });
 
 
@@ -118,3 +132,19 @@ initializeDropdown(".events__time-select", $timeEvent, $timeEventInput, $timeOut
 var timeCheck = '#eventsTime';
 var timeLabel = '#eventsTime+label';
 closeAside(timeCheck, timeLabel);
+/*First dropbox section4*/
+var $targetOffers = ".offers__places-item";
+var $targetOffersInput = "[id^='offersPlace']";
+var $offersOutput = $(".offers__places-input");
+initializeDropdown(".offers__places-select", $targetOffers, $targetOffersInput, $offersOutput);
+var offersCheck = '#offersPlace';
+var offersLabel = '#offersPlace+label';
+closeAside(offersCheck, offersLabel);
+/*Second dropbox section4*/
+var $targetOffer = ".offer__place-item";
+var $targetOfferInput = "[id^='offerPlace']";
+var $offerOutput = $(".offer__place-input");
+initializeDropdown(".offer__place-select", $targetOffer, $targetOfferInput, $offerOutput);
+var offerCheck = '#offerPlace';
+var offerLabel = '#offerPlace+label';
+closeAside(offerCheck, offerLabel);

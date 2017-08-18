@@ -2,21 +2,23 @@
 @import "_fonts";
 
 /*********************
-Event section
+Popular grub section
 *********************/
-.events {
-  min-height: 400px;
-  background-color: @main-white-color2;
+.offers {
+  min-height: 317px;
+  background-color: @main-white-color1;
 }
-.events__inner {
+
+.offers__inner {
   max-width: @main-width;
   min-height: inherit;
   margin: 0 auto;
   text-align: left;
 }
-.events__inner h3 {
+
+.offers__inner h3 {
   display: inline-block;
-  margin: 32px 23px 20px 0;
+  margin: 50px 42px 30px 0;
   font-family: "Oswald-Medium", sans-serif;
   font-size: 16px;
   color: @main-black-color;
@@ -24,16 +26,18 @@ Event section
   line-height: 13px;
   position: relative;
 }
-.events__loc-sel-box,
-.events__time-sel-box {
+
+.offers__loc-sel-box,
+.offers__place-sel-box {
   display: inline-block;
-  margin: 32px 10px 20px 0;
+  margin: 50px 18px 30px 0;
   position: relative;
   height: 13px;
   line-height: 13px;
 }
-.events__places-btn,
-.events__time-btn {
+
+.offers__places-btn,
+.offer__place-btn {
   margin: 0;
   font-family: "Lato-Regular", sans-serif;
   font-size: 14px;
@@ -47,12 +51,14 @@ Event section
     display: none;
   }
 }
-#eventsPlace,
-#eventsTime {
+
+#offersPlace,
+#offerPlace {
   display: none;
 }
-.events__places-select,
-.events__time-select {
+
+.offers__places-select,
+.offer__place-select {
   display: none;
   list-style: none;
   width: 135px;
@@ -66,12 +72,14 @@ Event section
   left: -5px;
   z-index: 3;
 }
-#eventsPlace:checked ~ .events__places-select,
-#eventsTime:checked ~ .events__time-select {
+
+#offersPlace:checked ~ .offers__places-select,
+#offerPlace:checked ~ .offer__place-select {
   display: block;
 }
-#eventsPlace:checked + label,
-#eventsTime:checked + label {
+
+#offersPlace:checked + label,
+#offerPlace:checked + label {
   & > i.fa-angle-down {
     display: none;
   }
@@ -79,8 +87,9 @@ Event section
     display: inline-block;
   }
 }
-li.events__places-item,
-li.events__time-item {
+
+li.offers__places-item,
+li.offer__place-item {
   height: 30px;
   border-top: solid 1px @main-grey-color1;
   border-right: solid 1px @main-grey-color1;
@@ -102,78 +111,23 @@ li.events__time-item {
   }
 }
 
-.events__period-select {
-  display: inline-block;
-  margin: 34px 0 19px 0;
-  height: 13px;
-  line-height: 13px;
-}
-.events__period-item {
-  display: inline-block;
-  margin: 0 12px 12px 0;
-  height: 13px;
-  line-height: 13px;
-  & > input[type=radio] {
-    display: none;
-  }
-  & > label {
-    margin: 0;
-    font-family: "Lato-Regular", sans-serif;
-    font-size: 14px;
-    color: @main-grey-color2;
-    text-transform: uppercase;
-    &:hover {
-      color: @main-orange-color;
-      text-decoration: underline;
-    }
-  }
-}
-input[id^="eventsPeriod"]:checked + label {
-  color: @main-orange-color;
-  text-decoration: underline;
-}
-
-.events__places-see-all {
-  display: inline-block;
-  margin: 32px 0 20px 0;
-  font-family: "Lato-Regular", sans-serif;
-  font-size: 16px;
-  height: 13px;
-  line-height: 13px;
-  color: #0c0c0c;
-  text-transform: none;
-  &:hover {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 700;
-    & > i {
-      font-weight: 700;
-    }
-  }
-}
-
-.events__top-text {
-  font-family: "Lato-Light", sans-serif;
-  font-size: 18px;
-  color: @main-black-color;
-  line-height: 18px;
-  margin-bottom: 20px;
-}
-
 /******************************
-Events gallery styles
+Offers gallery styles
 ******************************/
-.events__places-gallery {
+.offers__places-gallery {
   padding-right: 0;
   padding-left: 0;
 }
-.events__places-list {
+
+.offers__places-list {
   list-style: none;
 }
-.events__places-list .event__place-item {
-  width: 170px;
-  height: 240px;
+
+.offers__places-list .offer__place-item {
+  width: 270px;
+  height: 170px;
   border-radius: 5px;
+  border: none;
   background-color: @main-black-color;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
@@ -194,11 +148,12 @@ Events gallery styles
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5)
   }
 }
-.event__place-img-box {
+
+.offer__place-img-box {
   width: 100%;
   height: 100%;
   position: relative;
-  & > .event__place-link {
+  & > .offer__place-link {
     display: inline-block;
     width: inherit;
     height: inherit;
@@ -208,69 +163,85 @@ Events gallery styles
     bottom: 0;
     left: 0;
   }
-  & > .event__place-img {
+  & > .offer__place-img {
     width: inherit;
     height: inherit;
   }
-  & > .event__place-img-caption {
+  & > .offer__place-img-caption {
     font-family: "Roboto-Black", sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: @main-white-color1;
     text-align: left;
+    text-transform: none;
     position: absolute;
-    top: 174px;
+    bottom: 15px;
     left: 15px;
   }
 }
+
 .underlined {
   text-decoration: underline;
 }
-.event__place-announcement {
+
+.offer__place-link .offer__place-announcement {
   display: inline-block;
   width: inherit;
   height: inherit;
-  padding: 15px;
   background-color: rgba(85, 63, 2, 0.5);
-  color: @main-white-color1;
-  font-size: 16px;
-  & > .event__place-announcement1 {
+  color: @main-orange-color;
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  & > .offer__place-announcement1 {
     display: inline-block;
-    margin: 25px 0 40px;
-    font-family: "Roboto-Black", sans-serif;
-    color: @main-orange-color;
-    line-height: 16px;
-  }
-  & > .event__place-announcement2,
-  & > .event__place-announcement3 {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-family: "Roboto-Black", sans-serif;
-    line-height: 18px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
-.event__place-item:hover .event__place-img-caption {
+
+.offer__place-item:hover .offer__place-img-caption {
   display: none;
 }
-.event__place-item:hover .event__place-link{
-  -webkit-animation: eventHover 0.5s linear;
-  -o-animation: eventHover 0.5s linear;
-  animation: eventHover 0.5s linear;
+
+.offer__place-item:hover .offer__place-link {
+  -webkit-animation: offerHover 0.5s linear;
+  -o-animation: offerHover 0.5s linear;
+  animation: offerHover 0.5s linear;
   top: 0;
 }
-@keyframes eventHover {
-  0%   {top: 100%;}
-  25%  {top: 75%;}
-  50%  {top: 50%;}
-  75%  {top: 25%;}
-  100% {top: 0;}
+
+@keyframes offerHover {
+  0% {
+    top: 100%;
+  }
+  25% {
+    top: 75%;
+  }
+  50% {
+    top: 50%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 0;
+  }
 }
-.events__places-gallery .bx-wrapper {
-  height: 255px;
+
+.offers__places-gallery .bx-wrapper {
+  height: 185px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 20px;
-  background-color: @main-white-color2;
+  background-color: @main-white-color1;
   border: none;
   box-shadow: none;
   & > .bx-viewport {
@@ -278,8 +249,9 @@ Events gallery styles
     padding-top: 5px;
   }
 }
-.events__places-gallery .events__prev-btn,
-.events__places-gallery .events__next-btn {
+
+.offers__places-gallery .offers__prev-btn,
+.offers__places-gallery .offers__next-btn {
   width: 18px;
   height: 33px;
   color: #7d7f7f;
@@ -315,10 +287,10 @@ Events gallery styles
   }
 }
 
-.events__places-gallery .events__prev-btn {
+.offers__places-gallery .offers__prev-btn {
   left: -48px;
 }
 
-.events__places-gallery .events__next-btn {
+.offers__places-gallery .offers__next-btn {
   right: -48px;
 }
