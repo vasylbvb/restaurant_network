@@ -148,3 +148,11 @@ initializeDropdown(".offer__place-select", $targetOffer, $targetOfferInput, $off
 var offerCheck = '#offerPlace';
 var offerLabel = '#offerPlace+label';
 closeAside(offerCheck, offerLabel);
+/*Dropbox section5*/
+var $targetReview = ".reviews__places-item";
+var $targetReviewInput = "[id^='reviewsPlace']";
+var $reviewOutput = $(".reviews__places-input");
+initializeDropdown(".reviews__places-select", $targetReview, $targetReviewInput, $reviewOutput);
+var reviewCheck = '#reviewsPlace';
+var reviewLabel = '#reviewsPlace+label';
+closeAside(reviewCheck, reviewLabel);

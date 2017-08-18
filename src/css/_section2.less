@@ -81,7 +81,6 @@ li.popular-grub__places-item {
   line-height: 28px;
   text-align: center;
   color: @main-grey-color2;
-  text-transform: uppercase;
   & > input[type=radio] {
     display: none;
   }
@@ -90,6 +89,9 @@ li.popular-grub__places-item {
   }
   &:last-child {
     border-bottom: solid 1px @main-grey-color1;
+  }
+  & > label {
+    text-transform: uppercase;
   }
 }
 .popular-grub__places-see-all {
