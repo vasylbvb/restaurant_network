@@ -1,0 +1,64 @@
+@import "_vars";
+@import "_fonts";
+
+/***********************
+Our mission page styles
+***********************/
+.mission {
+  min-height: 910px;
+  background-color: @main-white-color1;
+}
+
+.mission__inner {
+  max-width: @main-width;
+  min-height: inherit;
+  margin: 0 auto;
+  & > .row {
+    &:nth-child(2),
+    &:nth-child(3) {
+      min-height: 313px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.mission__title-box {
+  text-align: center;
+  color: @main-black-color;
+}
+
+.mission__title {
+  margin-top: 48px;
+  margin-bottom: 22px;
+  font-family: "Oswald-Regular", sans-serif;
+  font-size: 36px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.mission__title-box p {
+  margin-top: 0;
+  margin-bottom: 58px;
+  font-family: "Oswald-Light", sans-serif;
+  font-size: 30px;
+  line-height: 26px;
+}
+
+.mission__line-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 3px 10px @main-grey-color2;
+}
+
+.mission__line-text-box p {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 18px;
+  color: @main-grey-color2;
+  & > span {
+    font-family: "Lato-Bold", sans-serif;
+    font-size: 24px;
+    color: @main-orange-color;
+  }
+}
