@@ -1,3 +1,6 @@
+@import "_vars";
+@import "_fonts";
+
 .global-header {
   min-width: 100%;
   min-height: @header-height;
@@ -175,11 +178,16 @@
       font-family: "Roboto-Black", sans-serif;
       line-height: 105px;
       cursor: pointer;
-      &:hover {
-        color: inherit;
+      &:hover,
+      &:focus,
+      &:active {
+        color: @main-orange-color;
+        outline: none;
       }
     }
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: @main-orange-color;
     }
   }

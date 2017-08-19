@@ -27,12 +27,23 @@
 /***********************
 footer-signup-form
 **********************/
+.footer-signup-form {
+  min-height: 55px;
+  &:before {
+    display: inline-block;
+    content: "";
+    width: 0;
+    min-height: inherit;
+    vertical-align: top;
+  }
+}
 .footer-signup-form>.input-group,
 .footer-signup-form>button {
   display: inline-block;
   width: 220px;
   height: 40px;
   margin-bottom: 15px;
+  vertical-align: top;
 }
 .footer-signup__location > label {
   position: relative;
@@ -61,6 +72,7 @@ footer-signup-form
           line-height: 40px;
           & > input.select2-search__field {
             margin: 0;
+            width: 100% !important;
             &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
               font-family: "Lato-Regular", sans-serif;
               font-size: 14px;

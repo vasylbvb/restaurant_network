@@ -20,6 +20,18 @@ $(document).ready(function () {
         //theme: "classic"
         //maximumSelectionLength: 2
     });
+    $("#location-select-secondary").select2({
+        placeholder: "Choose location",
+        allowClear: true
+        //theme: "classic"
+        //maximumSelectionLength: 2
+    });
+    $("#cuisine-select-secondary").select2({
+        placeholder: "Select one or more cuisines",
+        allowClear: true
+        //theme: "classic"
+        //maximumSelectionLength: 2
+    });
     $("#locationOfferSelect").select2({
         placeholder: "Choose location",
         allowClear: true,
